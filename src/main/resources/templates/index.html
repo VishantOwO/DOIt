@@ -26,9 +26,9 @@
     <a href="/?sort=priority" class="btn btn-secondary mb-3">Sort by Priority</a>
     <ul class="list-group">
         <li th:each="todo : ${todos}" class="list-group-item">
-                <span th:class="${todo.priority == 'LOW'} ? 'priority-low' :
-                              (${todo.priority == 'MEDIUM'} ? 'priority-medium' : 'priority-high')"
-                      th:text="${todo.description}"></span>
+        <span th:class="${todo.priority == 'LOW'} ? 'priority-low' :
+                          (${todo.priority == 'MEDIUM'} ? 'priority-medium' : 'priority-high')"
+              th:text="${todo.description} + ' (' + ${todo.priority} + ')'"></span>
             <a th:href="@{/toggle/{id}(id=${todo.id})}" class="btn btn-sm btn-secondary float-end ms-2">
                 <span th:text="${todo.completed} ? 'Undo' : 'Complete'"></span>
             </a>

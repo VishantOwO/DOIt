@@ -28,7 +28,7 @@ public class TodoController {
     // Add a new to-do item with priority
     @PostMapping("/add")
     public String addTodo(@RequestParam String description, @RequestParam Priority priority) {
-        Todo todo = new Todo(description, false);
+        Todo todo = new Todo(description, false, priority);
         todoService.saveTodo(todo);
         return "redirect:/";
     }

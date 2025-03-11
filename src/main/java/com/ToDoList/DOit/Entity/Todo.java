@@ -18,7 +18,7 @@ public class Todo {
     // Constructors, Getters, and Setters
     public Todo() {}
 
-    public Todo(String description, boolean completed) {
+    public Todo(String description, boolean completed, Priority priority) {
         this.description = description;
         this.completed = completed;
         this.priority = priority;
